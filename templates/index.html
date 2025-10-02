@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Naslovnica{% endblock %}
+{% block content %}
+<h1 class="mb-5 mt-5 text-center">Dobrodosli!</h1>
+<p>Ovo je minimalni SSR Flask kostur.</p>
+<p>Pozdrav {{student.nickname | default ("nema nadimak")}}</p>
+
+<ul>
+    {% for product in products %}
+    <li>{{ loop.index0 }}. {{ product }}</li>
+    {% endfor %}
+</ul>
+
+<button class="btn btn-primary">Spremi</button>
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">Naslov kartice</h5>
+        <p class="card-text">Tekst u kartici.</p>
+        <a href="#" class="btn btn-secondary">Više</a>
+    </div>
+</div>
+
+<form>
+    <div class="mb-3">
+        <label for="email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="email">
+    </div>
+    <button type="submit" class="btn btn-success">šPoalji</button>
+</form>
+
+{% endblock %}

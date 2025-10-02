@@ -1,0 +1,23 @@
+{% extends "base.html" %} {# nasljeduje osnovni template base.html #}
+
+{% block title %}O nama{% endblock %} {# mijenja sadrzaj <title> taga iz base.html #}
+
+{% block content %}
+	<!-- Pocetak glavnog sadrzaja stranice -->
+
+	{# naslov koji će se prikazati korisniku #}
+	<h1>O projektu</h1>
+
+	<!-- Kratki opis stranice -->
+	<p>Kolegij: Programiranje za Web (Flask).</p>
+
+	<!-- Kraj sadrzaja stranice -->
+
+    <hr/>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8" style="border: 1px solid black">Glavni sadrzaj</div>
+            <div class="col-md-4" style="border: 1px solid red">Sidebar</div>
+        </div>
+    </div>
+{% endblock %}
